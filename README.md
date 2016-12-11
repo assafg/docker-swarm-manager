@@ -13,4 +13,16 @@ $ vagrant ssh
 $ sudo docker swarm init --advertise-addr 192.168.33.10
 ```
 
-Follow the instructions to add the other VM`s to the swarm (see [this tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/) for more info on creating a swarm)
+Follow the instructions to add the other VM's to the swarm (see [this tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/) for more info on creating a swarm)
+
+## Starting the manager
+cd into the ./manager directory
+
+```bash
+$ vagrant ssh
+[vagrant@localhost ~]$ cd /vagrant/manager-server/
+[vagrant@localhost ~]$ sudo su
+[vagrant@localhost ~]$ yarn install
+[vagrant@localhost ~]$ npm start
+```
+In the host machine brows to [http://192.168.33.10:3000/](http://192.168.33.10:3000/)
